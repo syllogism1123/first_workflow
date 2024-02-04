@@ -31,7 +31,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 20
+          node-version: latest
 
       - name: Print a message for main branch
         if: github.ref == 'refs/heads/main'
@@ -57,7 +57,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 20
+          node-version: latest
 
       - name: Print a message for main branch
         if: github.ref == 'refs/heads/main'
