@@ -23,7 +23,7 @@ on:
 # Jobs defined in the workflow
 jobs:
   build-and-test-1:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-'20'
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -31,7 +31,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: latest
+          node-version: '20'
 
       - name: Print a message for main branch
         if: github.ref == 'refs/heads/main'
@@ -49,7 +49,7 @@ jobs:
         run: echo "Debugging is enabled."
 
   build-and-test-2:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-'20'
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -57,7 +57,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: latest
+          node-version: '20'
 
       - name: Print a message for main branch
         if: github.ref == 'refs/heads/main'
@@ -76,7 +76,7 @@ jobs:
 
   post-build-actions:
     needs: [build-and-test-1, build-and-test-2]
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-'20'
     steps:
       - name: Publish test results
         uses: actions/upload-artifact@v3
