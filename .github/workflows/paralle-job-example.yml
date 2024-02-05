@@ -26,10 +26,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@latest_version
 
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@latest_version
         with:
           node-version: latest
 
@@ -52,10 +52,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@latest_version
 
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@latest_version
         with:
           node-version: latest
 
@@ -79,7 +79,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Publish test results
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@latest_version
         with:
           name: test-results
           path: test-results.xml
